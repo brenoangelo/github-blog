@@ -1,0 +1,65 @@
+:root {
+  /* Colors */
+  --blue-600: #3294F8;
+
+  --zinc-50: #E7EDF4;
+  --zinc-100: #C4D4E3;
+  --zinc-200: #7B96B2;
+  --zinc-400: #3A536B;
+  --zinc-500: #1C2F41;
+  --zinc-600: #112131;
+  --zinc-700: #0B1B2B;
+  --zinc-800: #071422;
+  --zinc-900: #040F1A;
+
+  /* Font-size */
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+
+  /* Font-weight */
+  --weight-regular: regular;
+  --weight-bold: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%; // 15px
+  }
+
+  @media (max-width: 720px) {
+    font-size: 87.5%; // 14px
+  }
+}
+
+body {
+  background-color: var(--zinc-900);
+  color: var(--zinc-50);
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, textarea, button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: var(--weight-regular);
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: var(--weight-bold);
+}
+
+button {
+  cursor: pointer;
+}
+
+[disabled] {
+  cursor: default;
+}
