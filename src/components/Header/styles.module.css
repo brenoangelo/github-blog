@@ -1,0 +1,6 @@
+.header {
+  background: url('/src/public/assets/background.svg') no-repeat center;
+  background-size: cover;
+  height: 18.5rem;
+  width: 100%;
+}

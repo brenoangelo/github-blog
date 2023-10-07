@@ -1,0 +1,9 @@
+.cardWrapper {
+  padding: 2rem 2rem 2rem 2.5rem;
+  background-color: var(--zinc-700);
+
+  display: flex;
+  gap: 2rem;
+
+  border-radius: var(--rounded-xl);
+}

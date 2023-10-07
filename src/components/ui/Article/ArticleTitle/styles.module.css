@@ -1,0 +1,10 @@
+.titleWarpper {
+}
+
+.titleWarpper h1,
+.titleWarpper h2,
+.titleWarpper h3,
+.titleWarpper h4,
+.titleWarpper h5 {
+  font-size: 1.25rem;
+}

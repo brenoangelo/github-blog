@@ -1,5 +1,11 @@
-import './styles/global.css'
+import { BrowserRouter } from 'react-router-dom';
+import './styles/global.css';
+import { Router } from './Router';
 
 export function App() {
-  return <h2>banana</h2>;
+  return (
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
+  );
 }

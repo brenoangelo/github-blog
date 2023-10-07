@@ -4,6 +4,7 @@
 
   --zinc-50: #E7EDF4;
   --zinc-100: #C4D4E3;
+  --zinc-150: #AFC2D4;
   --zinc-200: #7B96B2;
   --zinc-400: #3A536B;
   --zinc-500: #1C2F41;
@@ -23,6 +24,12 @@
   /* Font-weight */
   --weight-regular: regular;
   --weight-bold: bold;
+
+  /* Radius */
+  --rounded-full: 50%;
+  --rounded-xl: 0.625rem;
+  --rounded-lg: 0.5rem;
+  --rounded-md: 0.375rem;
 }
 
 * {
@@ -42,8 +49,8 @@ html {
 }
 
 body {
-  background-color: var(--zinc-900);
-  color: var(--zinc-50);
+  background-color: var(--zinc-800);
+  color: var(--zinc-150);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -54,6 +61,7 @@ body, input, textarea, button {
 
 h1, h2, h3, h4, h5 {
   font-weight: var(--weight-bold);
+  color: var(--zinc-50);
 }
 
 button {
@@ -62,4 +70,9 @@ button {
 
 [disabled] {
   cursor: default;
+}
+
+:focus {
+  outline: 1px solid var(--blue-600);
+  border-radius: var(--rounded-md);
 }

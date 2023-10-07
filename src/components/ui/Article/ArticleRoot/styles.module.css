@@ -1,0 +1,8 @@
+
+.articleWrapper {
+  padding: 2rem;
+  background-color: var(--zinc-600);
+  border-radius: var(--rounded-xl);
+
+  height: 16.25rem;
+}

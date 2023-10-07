@@ -1,0 +1,10 @@
+.cardFooter {
+  display: flex;
+  gap: 1.5rem;
+
+  margin-top: auto;
+}
+
+.cardFooter > div > span{
+  color: var(--zinc-50);
+}

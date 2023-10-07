@@ -1,0 +1,4 @@
+.homeContainer > div > div:first-child {
+  position: relative;
+  top: calc(-13.25rem / 2); /* 13.25rem is a card height*/
+}

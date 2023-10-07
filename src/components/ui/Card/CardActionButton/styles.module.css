@@ -1,0 +1,14 @@
+.actionButtonWrapper {
+  color: var(--blue-600);
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  border: 0;
+
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  font-size: var(--size-xs);
+}
