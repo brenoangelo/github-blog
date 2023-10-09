@@ -1,8 +1,17 @@
 
 .articleWrapper {
+  display: block;
   padding: 2rem;
   background-color: var(--zinc-600);
   border-radius: var(--rounded-xl);
 
   height: 16.25rem;
+
+  text-decoration: none;
+  color: var(--zinc-150);
+
+  &:focus,
+  &:hover {
+    outline: 2px solid var(--zinc-400);
+  }
 }

@@ -1,6 +1,5 @@
 import { ArticlesGroup } from '../../components/ArticlesGroup';
 import { CardInfo } from '../../components/CardInfo';
-import { Article } from '../../components/ui/Article';
 import { Search } from '../../components/ui/Search';
 
 import commonStyles from '../../styles/commonStyles.module.css';
@@ -22,7 +21,7 @@ export function Home() {
           <Search.Input placeholder="Buscar conteúdo" />
         </Search.Root>
 
-        <section>
+        <section className={styles.articlesSection}>
           <ArticlesGroup />
         </section>
       </div>

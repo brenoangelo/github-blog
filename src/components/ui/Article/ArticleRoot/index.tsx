@@ -1,7 +1,17 @@
-import styles from './styles.module.css'
+import { Link } from 'react-router-dom';
+import styles from './styles.module.css';
 
-export function ArticleRoot({ children }: React.PropsWithChildren) {
+interface ArticleRootProps {
+  to: string;
+}
+
+export function ArticleRoot({
+  to,
+  children,
+}: React.PropsWithChildren<ArticleRootProps>) {
   return (
-    <article className={styles.articleWrapper}>{children}</article>
-  )
+    <Link to={to} className={styles.articleWrapper}>
+      {children}
+    </Link>
+  );
 }
