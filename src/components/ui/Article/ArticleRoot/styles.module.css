@@ -1,5 +1,7 @@
 
 .articleWrapper {
+  overflow: hidden;
+
   display: block;
   padding: 2rem;
   background-color: var(--zinc-600);

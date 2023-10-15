@@ -1,32 +1,41 @@
+import Markdown from 'react-markdown';
+import { RepositoryIssueItem } from '../../services/github';
 import { Article } from '../ui/Article';
 
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
-const ARTICLES = [
-  { title: 'lorem', content: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in data structures available in' },
-  { title: 'lorem', content: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in data structures available in' },
-  { title: 'lorem', content: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in data structures available in' },
-  { title: 'lorem', content: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in data structures available in' },
-  { title: 'lorem', content: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in data structures available in' },
-  { title: 'lorem', content: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in data structures available in' },
-  { title: 'lorem', content: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in data structures available in' },
-  { title: 'lorem', content: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in data structures available in' },
-  { title: 'lorem', content: 'Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in data structures available in' },
+const REMOVE_ELEMENTS = [
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'strong',
+  'em',
+  'i',
+  'img',
+  'hr',
 ];
 
-export function ArticlesGroup() {
+interface ArticlesGroupProps {
+  articles?: RepositoryIssueItem[];
+}
+
+export function ArticlesGroup({ articles }: ArticlesGroupProps) {
   return (
     <div className={styles.articlesWrapper}>
-      {ARTICLES.map(({ title, content }) => (
-        <Article.Root to="/post/1">
+      {articles?.map((article) => (
+        <Article.Root key={article.id} to={`/post/${article.id}`}>
           <Article.Title>
-            <h3>{title}</h3>
+            <h3>{article.title}</h3>
 
             <small>Há 1 dia</small>
           </Article.Title>
 
           <Article.Content>
-            <p>{content}</p>
+            <Markdown disallowedElements={REMOVE_ELEMENTS}>
+              {article.body}
+            </Markdown>
           </Article.Content>
         </Article.Root>
       ))}

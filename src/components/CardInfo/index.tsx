@@ -2,16 +2,19 @@ import { FaArrowUpRightFromSquare, FaGithub } from 'react-icons/fa6';
 import { Card } from '../ui/Card';
 
 import styles from './styles.module.css';
+import { useGetUser } from '../hooks/useGetUser';
 
 export function CardInfo() {
+  const { user } = useGetUser();
+
   return (
     <Card.Root>
-      <Card.Image src="https://i.pravatar.cc/150?img=11" alt="breno angelo" />
+      <Card.Image src={user.avatar_url} alt={user.name} />
       <Card.GroupContent>
-        <Card.Content text="Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.">
+        <Card.Content text={user.bio}>
           <Card.ContentHeader>
-            <h1>Breno Angelo</h1>
-            <Card.ActionButton>
+            <h1>{user.name}</h1>
+            <Card.ActionButton to={user.html_url} target="_blank">
               ver no github
               <FaArrowUpRightFromSquare />
             </Card.ActionButton>
@@ -21,17 +24,17 @@ export function CardInfo() {
         <footer className={styles.cardFooter}>
           <Card.IconInfo>
             <FaGithub />
-            <span>Breno Angelo</span>
+            <span>{user.login}</span>
           </Card.IconInfo>
 
           <Card.IconInfo>
             <FaGithub />
-            <span>Sensedata</span>
+            <span>{user.company}</span>
           </Card.IconInfo>
 
           <Card.IconInfo>
             <FaGithub />
-            <span>35 seguidores</span>
+            <span>{user.followers} seguidores</span>
           </Card.IconInfo>
         </footer>
       </Card.GroupContent>

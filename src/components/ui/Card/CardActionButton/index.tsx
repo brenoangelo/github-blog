@@ -1,15 +1,15 @@
+import { Link, LinkProps } from 'react-router-dom';
 import styles from './styles.module.css';
 
-interface CardActionButtonProps
-  extends React.HtmlHTMLAttributes<HTMLButtonElement> {}
+interface CardActionButtonProps extends LinkProps {}
 
 export function CardActionButton({
   children,
   ...props
 }: React.PropsWithChildren<CardActionButtonProps>) {
   return (
-    <button {...props} className={styles.actionButtonWrapper}>
+    <Link {...props} className={styles.actionButtonWrapper}>
       {children}
-    </button>
+    </Link>
   );
 }

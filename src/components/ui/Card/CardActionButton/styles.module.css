@@ -11,4 +11,6 @@
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   font-size: var(--size-xs);
+
+  text-decoration: none;
 }

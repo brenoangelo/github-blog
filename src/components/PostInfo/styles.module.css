@@ -1,0 +1,25 @@
+.postInfoContainer {
+  width: 100%;
+}
+
+.headerContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.actionButtons {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.postFooter {
+  display: flex;
+  gap: 2rem;
+}
